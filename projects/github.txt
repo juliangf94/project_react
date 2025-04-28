@@ -1,0 +1,125 @@
+Como crear un projecto en github:
+
+■ Parte 1: Preparar tu proyecto en tu computadora
+ 1) Abre Visual Studio Code y abre tu carpeta de proyecto (por ejemplo project_react).
+ 2) Abre la terminal (puedes usar Ctrl + ñ o Terminal -> New Terminal).
+
+■ Parte 2: Inicializar Git
+En la terminal, estando dentro de tu carpeta:
+
+bash
+git init
+
+➡️ Esto crea un repositorio Git local (carpeta .git oculta).
+
+■ Parte 3: Crear tu repositorio en GitHub
+1) Ve a github.com.
+2) Inicia sesión.
+3) Haz clic en el botón verde "New" para crear un repositorio.
+4) Ponle un nombre (por ejemplo project_react).
+5) No marques la opción "Initialize this repository with a README" (porque tú ya tienes archivos).
+6) Haz clic en "Create repository".
+7) GitHub te va a mostrar una URL, algo como:
+https://github.com/juliangf94/project_react.git
+
+■ Parte 4: Conectar tu proyecto local con GitHub
+En la terminal de VS Code, escribe:
+ 1) Agrega el "remote" (enlace a GitHub):
+
+ git remote add origin https://github.com/juliangf94/project_react.git
+ 2)(Opcional) Asegura que tu rama se llame main:
+
+ git branch -M main
+
+■ Parte 5: Subir los archivos
+Primero preparas los archivos para enviar:
+ 1) Agregar todos los archivos:
+
+ git add .
+
+ 2) Crear tu primer commit (una foto de los archivos actuales):
+
+ git commit -m "Initial commit"
+
+  Ahora sí subes todo a GitHub:
+ 3) Hacer el push al repositorio remoto:
+
+ git push -u origin main
+
+■ Resumen rápido
+
+git init
+git remote add origin https://github.com/usuario/repositorio.git
+git branch -M main
+git add .
+git commit -m "Initial commit"
+git push -u origin main
+
+-------------------------------------------------------------------------------------------------------------------------------
+¿Cómo guardar cambios en Git?
+🔵 1. git add
+Este comando le dice a Git qué archivos quieres preparar para guardar.
+Para agregar todos los archivos nuevos y modificados:
+
+git add .
+
+El punto . significa "todos los archivos".
+
+🟠 2. git commit
+Ahora guardas una foto del estado actual de tus archivos en el repositorio local.
+
+git commit -m "Escribe aquí un mensaje explicando qué cambios hiciste"
+
+Ejemplo:
+git commit -m "Agregado archivo explicativo sobre git"
+
+🟢 3. git push
+Finalmente, subes tus cambios a GitHub (el repositorio remoto):
+
+git push
+
+
+🧠 Resumen rápido para cada cambio:
+
+git add .
+git commit -m "tu mensaje"
+git push
+
+-------------------------------------------------------------------------------------------------------------------------------
+¿Qué es una "branch" (rama) en Git?
+
+Una branch o rama es una línea de trabajo separada de tu proyecto.
+Te permite trabajar en nuevas funciones, arreglos o experimentos sin tocar la versión principal (main) hasta que esté listo.
+
+Imagina tu proyecto como un árbol:
+
+ - main es el tronco principal.
+ - Cada branch es una rama donde puedes trabajar aparte.
+ - Cuando terminas en una branch, puedes fusionarla (merge) con main.
+
+📌 ¿Para qué sirve usar ramas?
+ - Para corregir errores sin afectar el resto del código.
+ - Para probar ideas o experimentar.
+ - Para trabajar en equipo: cada uno puede tener su propia rama.
+ - Para desarrollar nuevas funcionalidades sin romper la versión que funciona.
+
+📚 Ejemplo básico de uso de branch:
+
+ 1) Crear una nueva rama: 
+
+ git checkout -b nueva-funcionalidad
+
+ 2) Trabajas en esa rama (cambias archivos, haces commits, etc.).
+
+ 3) Cuando termines, vuelves a main:
+
+ git checkout main
+
+ 4) Y unes (merge) los cambios:
+
+ git merge nueva-funcionalidad
+
+🎯 ¿Cuándo usar ramas?
+ - Si vas a hacer cambios importantes.
+ - Si quieres experimentar sin arriesgar el proyecto principal.
+ - Si estás trabajando en un proyecto en equipo (cada persona trabaja en su rama).
