@@ -1,0 +1,15 @@
+// _variables.scss
+
+$primary-bg: #001F3F;       // Dark Navy Blue
+$x-color: #FF4136;           // Bright Red
+$o-color: #39CCCC;           // Bright Cyan
+$chat-bg: #272c2e;          // Very Light Blue
+$button-red: #DC143C;       // Crimson Red
+$button-white: white;
+$buttonLogBg: #4299e1;      // Light Blue
+$text-win: #228B22;         // Forest Green
+$text-lose: #DC143C;        // Crimson Red (same as button)
+$text-general: #007bff;      // Blue
+$square-hover: lighten($primary-bg, 10%);
+$square-click: darken($primary-bg, 10%);
+$font-primary: sans-serif;

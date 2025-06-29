@@ -1,3 +1,14 @@
+Crear un projecto con react 
+ 1) nom create vite@latest
+ 2) Nombrar el projecto
+ 3) Elegir react
+ 4) Elegir JavaScript + SWC (para compilar el JS)
+ 5) cd carpeta
+ 6) npm install
+ 7) npm run dev
+
+ 
+-------------------------------------------------------------------------------------------------------------------------------
 Como crear un projecto en github:
 
 ■ Parte 1: Preparar tu proyecto en tu computadora
@@ -56,7 +67,7 @@ git commit -m "Initial commit"
 git push -u origin main
 
 -------------------------------------------------------------------------------------------------------------------------------
-¿Cómo guardar cambios en Git?
+¿Cómo guardar cambios en Git? (Forma lenta)
 🔵 1. git add
 Este comando le dice a Git qué archivos quieres preparar para guardar.
 Para agregar todos los archivos nuevos y modificados:
@@ -79,7 +90,7 @@ Finalmente, subes tus cambios a GitHub (el repositorio remoto):
 git push
 
 
-🧠 Resumen rápido para cada cambio:
+🧠 Resumen rápido para cada cambio (Forma rapida):
 
 git add .
 git commit -m "tu mensaje"
@@ -123,3 +134,16 @@ Imagina tu proyecto como un árbol:
  - Si vas a hacer cambios importantes.
  - Si quieres experimentar sin arriesgar el proyecto principal.
  - Si estás trabajando en un proyecto en equipo (cada persona trabaja en su rama).
+ -------------------------------------------------------------------------------------------------------------------------------
+
+ 🔍 ¿Para qué sirve dotenv?
+
+ Es un módulo que:
+
+ 1) Carga variables desde .env al entorno de Node.js (process.env).
+
+ 2) Mantiene secretos fuera del código:
+  Las claves no se exponen en GitHub ni al equipo (cada desarrollador tiene su propio .env).
+
+ 3) Facilita configuraciones por entorno:
+  Puedes tener distintos archivos (.env.development, .env.production).

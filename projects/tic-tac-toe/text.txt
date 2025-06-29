@@ -1,0 +1,6 @@
+
+Client:
+yarn add axios universal-cookie stream-chat stream-chat-react
+
+Server:
+yarn add express nodemon uuid cors bcrypt

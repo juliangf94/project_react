@@ -14,5 +14,8 @@
   },
   "eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0"
   }
 }

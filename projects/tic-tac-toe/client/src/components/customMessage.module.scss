@@ -1,0 +1,173 @@
+@import '../_variables';
+
+/*Chat*/
+.customMessageContentWrapper {
+    background-color: lighten($chat-bg, 5%);
+    margin-bottom: 8px;
+    border-radius: 12px;
+    padding: 8px 12px;
+    font-size: 0.85em;
+    //color: #333;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    max-width: 70%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: 10px;
+    border-top-left-radius: 2px;
+}
+
+.userName {
+    font-size: 0.75em;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 4px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.messageContent {
+    font-size: 1em;
+    color: #ffffff;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+.messageActions {
+    display: flex;
+    margin-top: 6px;
+    gap: 5px;
+    justify-content: flex-start;
+}
+
+.reactionEmoji {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    padding: 3px 8px;
+    font-size: 0.7em;
+    color: #ffffff;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.25);
+        transform: translateY(-1px);
+    }
+
+    &:active {
+        background-color: rgba(255, 255, 255, 0.3);
+        transform: translateY(0);
+    }
+}
+
+.reactButton {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    padding: 4px 8px;
+    font-size: 0.75em;
+    cursor: pointer;
+    margin-top: 8px;
+    align-self: flex-start;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.8);
+        border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    &:active {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    @media (max-width: 480px) {
+        padding: 3px 6px;
+        font-size: 0.7em;
+        margin-top: 6px;
+    }
+}
+
+.currentUserMessage {
+    margin-left: auto;
+    margin-right: 10px;
+    background-color: darken($chat-bg, 10%);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 2px;
+
+    .userName {
+        text-align: right;
+    }
+
+    .messageContent {
+        text-align: right;
+    }
+
+    .messageActions {
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 768px) {
+    .customMessageContentWrapper {
+        margin-bottom: 6px;
+        padding: 6px 10px;
+        font-size: 0.8em;
+        max-width: 80%;
+    }
+
+    .userName {
+        font-size: 0.7em;
+        margin-bottom: 3px;
+    }
+
+    .messageContent {
+        font-size: 0.95em;
+    }
+
+    .messageActions {
+        margin-top: 4px;
+        gap: 4px;
+    }
+
+    .reactionEmoji {
+        padding: 2px 6px;
+        font-size: 0.65em;
+    }
+}
+
+@media (max-width: 480px) {
+    .customMessageContentWrapper {
+        font-size: 0.75em;
+        max-width: 85%;
+        padding: 5px 8px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .userName {
+        font-size: 0.65em;
+        margin-bottom: 2px;
+    }
+
+    .messageContent {
+        font-size: 0.9em;
+    }
+
+    .messageActions {
+        margin-top: 2px;
+        gap: 2px;
+    }
+
+    .reactionEmoji {
+        font-size: 0.6em;
+        padding: 1px 5px;
+    }
+
+}

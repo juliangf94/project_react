@@ -1,0 +1,160 @@
+@import '../_variables';
+
+.waitingMessage {
+  background-color: $primary-bg !important;
+  color: white;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-family: $font-primary;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.gameContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  flex-direction: row;
+  background-color: $primary-bg !important;
+}
+
+.gameTitle {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 20px;
+  font-family: $font-primary;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.gameBoardContainer {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary-bg !important;
+}
+
+.gameButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+.leaveGame {
+  background-color: $button-red;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  max-width: 200px;
+
+  &:hover {
+    background-color: darken($button-red, 10%);
+  }
+}
+
+/*Chat*/
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: $primary-bg !important;
+  max-width: 400px;
+  width: 300px;
+  height: 50vh;
+  margin: 0 auto;
+  border-radius: 8px;
+  padding: 0px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  overflow-y: hidden;
+}
+
+
+/* --- Media Queries --- */
+
+@media (max-width: 768px) {
+  .gameContainer {
+    flex-direction: column;
+    height: auto;
+    padding: 5px;
+  }
+
+  .gameTitle {
+    font-size: 2em;
+    margin-bottom: 15px;
+  }
+
+  .gameBoardContainer {
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 90vw;
+    max-width: 350px;
+  }
+
+  .gameButtons {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .leaveGame {
+    width: 90%;
+    max-width: 180px;
+    font-size: 0.9em;
+    padding: 8px 15px;
+  }
+
+  .chatContainer {
+    width: 90%;
+    height: 40vh;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+  }
+}
+
+@media (max-width: 480px) {
+  .gameTitle {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+
+  .gameBoardContainer {
+    width: 95vw;
+    max-width: 300px;
+  }
+
+  .gameButtons {
+    width: 95%;
+    max-width: 250px;
+  }
+
+  .leaveGame {
+    width: 85%;
+    max-width: 140px;
+    font-size: 0.85em;
+    padding: 7px 12px;
+  }
+
+
+}

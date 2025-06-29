@@ -1,2 +1,4 @@
-package-lock.json
-node_modules
+# Ignore only the files in tic-tac-toe
+projects/tic-tac-toe/server/.env
+projects/tic-tac-toe/server/node_modules/
+projects/tic-tac-toe/client/node_modules/ 
